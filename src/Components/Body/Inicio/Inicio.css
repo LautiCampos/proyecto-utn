@@ -1,0 +1,110 @@
+
+/* Contenedor principal */
+.inicio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Título animado */
+.inicio-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Descripción */
+.inicio-description {
+    font-size: 1.2rem;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Botón de exploración */
+.inicio-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    animation: fadeIn 1.4s ease-in-out;
+    text-decoration: none;
+}
+
+.inicio-button:hover {
+    background: var(--detail);
+    transform: scale(1.05);
+}
+
+/* Animación de fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .inicio-title {
+        font-size: 2.8rem;
+    }
+    .inicio-description {
+        font-size: 1.1rem;
+    }
+    .inicio-button {
+        font-size: 1rem;
+        padding: 0.7rem 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .inicio-title {
+        font-size: 2.5rem;
+    }
+    .inicio-description {
+        font-size: 1rem;
+        max-width: 500px;
+    }
+    .inicio-button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .inicio-title {
+        font-size: 2rem;
+    }
+    .inicio-description {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+    .inicio-button {
+        font-size: 0.8rem;
+        padding: 0.25rem 1rem;
+    }
+}

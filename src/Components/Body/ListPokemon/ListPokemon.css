@@ -1,0 +1,156 @@
+/* --- Contenedor de la lista --- */
+.list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    padding-top: var(--width-xs);
+    gap: var(--space-md);
+    padding-inline: var(--width-xs);
+    background-color: var(--bg);
+    justify-content: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* --- Tarjeta de Pokémon --- */
+.pokemon-card {
+    background-color: var(--card);
+    color: var(--text);
+    padding: var(--space-sm);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    box-shadow: 0px 4px 10px var(--shadow);
+    border: 2px solid transparent;
+}
+
+/* --- Hover --- */
+.pokemon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px var(--shadow);
+    border-color: var(--border);
+}
+
+/* --- Imagen del Pokémon --- */
+.pokemon-img1 {
+    width: var(--width-xs);
+    height: auto;
+    margin-bottom: var(--space-xs);
+    filter: drop-shadow(0px 2px 4px var(--shadow));
+    transition: transform 0.3s ease-in-out;
+}
+
+.pokemon-card:hover .pokemon-img1 {
+    transform: scale(1.1);
+}
+
+/* --- Nombre del Pokémon --- */
+.pokemon-name {
+    font-size: var(--font-lg);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+/* --- ID del Pokémon --- */
+.pokemon-id {
+    font-size: var(--font-sm);
+    opacity: 0.7;
+    font-weight: bold;
+}
+
+/* --- Tipo de Pokémon (color dinámico) --- */
+.pokemon-type {
+    font-size: var(--font-sm);
+    padding: var(--space-xxs) var(--space-xs);
+    border-radius: var(--radius-full);
+    color: white;
+    margin-top: var(--space-xxs);
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+/* --- Botón de subir arriba --- */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ffcc00;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.scroll-top-btn:hover {
+    background: #ffdb4d;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Responsive Design Mejorado --- */
+@media (max-width: 1279px) {
+    .list-container {
+        grid-template-columns: repeat(4, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 1000px) {
+    .list-container {
+        grid-template-columns: repeat(3, minmax(160px, 1fr));
+    }
+
+    .pokemon-card {
+        padding: var(--space-xs);
+    }
+
+    .pokemon-name {
+        font-size: var(--font-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .list-container {
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+        gap: var(--space-sm);
+    }
+
+    .pokemon-card {
+        padding: var(--space-xs);
+    }
+
+    .pokemon-name {
+        font-size: var(--font-sm);
+    }
+
+    .scroll-top-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 12px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .list-container {
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+    }
+
+    .pokemon-card {
+        padding: var(--space-xxs);
+    }
+
+    .pokemon-name {
+        font-size: var(--font-xs);
+    }
+
+    .scroll-top-btn {
+        bottom: 10px;
+        right: 10px;
+        padding: 6px 10px;
+        font-size: 16px;
+    }
+}

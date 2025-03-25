@@ -1,0 +1,109 @@
+
+:root{
+
+    /* Modo claro */
+    --bg-light: #f8f9fa;
+    --text-light: #212529;
+    --primary-light: #ffcc00;
+    --secondary-light: #007bff;
+    --detail-light: #dc3545;
+    --card-light: #ffffff;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --border-light: #ffcc00;
+
+    /* Modo oscuro */
+    --bg-dark: #121212;
+    --text-dark: #eaeaea;
+    --primary-dark: #ffcc00;
+    --secondary-dark: #0dcaf0;
+    --detail-dark: #ff3d71;
+    --card-dark: #1e1e1e;
+    --shadow-dark: rgba(255, 255, 255, 0.1);
+    --border-dark: #ffcc00;
+
+
+    --font-base: 'Tektur';        /*Fuente de Letra*/
+    
+
+    /* Espaciados */
+    --space-xxs: 0.25rem;  /* 4px */
+    --space-xxs-px: 4px;
+
+    --space-xs: 0.5rem;    /* 8px */
+    --space-xs-px: 8px;
+
+    --space-sm: 1rem;      /* 16px */
+    --space-sm-px: 16px;
+
+    --space-md: 1.5rem;    /* 24px */
+    --space-md-px: 24px;
+
+    --space-lg: 2rem;      /* 32px */
+    --space-lg-px: 32px;
+
+    --space-xl: 3rem;      /* 48px */
+    --space-xl-px: 48px;
+
+    --space-xxl: 4rem;     /* 64px */
+    --space-xxl-px: 64px;
+
+    --space-xxxl: 5rem;     /* 64px */
+    --space-xxxl-px: 80px;
+
+
+    /* Tamaños de fuente */
+    --font-xs: 0.75rem;   /* 12px */
+    --font-xs-px: 12px;
+
+    --font-sm: 0.875rem;  /* 14px */
+    --font-sm-px: 14px;
+
+    --font-md: 1rem;      /* 16px */
+    --font-md-px: 16px;
+
+    --font-lg: 1.25rem;   /* 20px */
+    --font-lg-px: 20px;
+
+    --font-xl: 1.5rem;    /* 24px */
+    --font-xl-px: 24px;
+
+    --font-xxl: 2rem;     /* 32px */
+    --font-xxl-px: 32px;
+
+    /* Anchos y alturas */
+    --width-xs: 10rem;    /* 160px */
+    --width-xs-px: 160px;
+
+    --width-sm: 20rem;    /* 320px */
+    --width-sm-px: 320px;
+
+    --width-md: 30rem;    /* 480px */
+    --width-md-px: 480px;
+
+    --width-lg: 40rem;    /* 640px */
+    --width-lg-px: 640px;
+
+    --width-xl: 50rem;    /* 800px */
+    --width-xl-px: 800px;
+
+    
+    /* Percentage */
+    --per-1: 5%;
+    --per-2: 10%;
+    --per-3: 15%;
+    --per-4: 25%;
+    --per-5: 50%;
+    --per-6: 75%;
+    --per-7: 100%;
+
+    /* Radius  */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-full: 9999px;
+  
+}
+
+body{
+    font-family: var(--font-base);
+}

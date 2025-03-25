@@ -1,0 +1,201 @@
+.back {
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px; /* Ajustar según la altura del header */
+    padding-inline: var(--space-sm);
+}
+
+.arrow-left {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: var(--primary);
+    text-decoration: none;
+    background: var(--bg);
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease-in-out;
+}
+
+.arrow-left:hover {
+    background: rgba(255, 255, 255, 1);
+    color: var(--primary);
+}
+
+.item {
+    position: relative;
+    width: 85%;
+    max-height: calc(100vh - 100px);
+    margin-inline: auto;
+    padding: var(--space-lg);
+    background: var(--card);
+    box-shadow: 0px 4px 10px var(--shadow);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    overflow-y: auto;
+}
+
+.item h2 {
+    align-self: flex-start;
+    text-align: left;
+    width: 100%;
+    padding-left: var(--space-md);
+}
+
+/* 📌 Diseño de la info del Pokémon */
+.grid-2-complete {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+    width: 100%;
+}
+
+/* 📌 Imagen del Pokémon */
+.pokemon-img {
+    width: var(--width-md);
+    height: auto;
+    display: block;
+    margin: auto;
+    filter: drop-shadow(0px 4px 8px rgba(65, 52, 52, 0.5));
+    transition: transform 0.3s ease-in-out;
+}
+
+.pokemon-img:hover {
+    transform: scale(1.05);
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+}
+
+.pokemon-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    justify-content: flex-start;
+}
+
+.pokemon-grid p {
+    padding: 8px 12px;
+    border-radius: var(--radius-full);
+    font-weight: bold;
+    font-size: var(--font-md);
+    text-transform: capitalize;
+    color: #fff;
+    box-shadow: 0px 2px 5px var(--shadow);
+}
+
+.evolution-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+    justify-content: center;
+}
+
+.evolution-card {
+    background: var(--card);
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: 0px 2px 5px var(--shadow);
+    width: 140px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.evolution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 8px var(--shadow);
+}
+
+/* 📌 Imagen en evoluciones */
+.evolution-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    filter: drop-shadow(0px 2px 4px rgba(255, 255, 255, 0.3));
+    transition: transform 0.3s ease-in-out;
+}
+
+.evolution-card:hover img {
+    transform: scale(1.1);
+}
+
+/* 📌 Responsividad */
+@media (max-width: 1024px) {
+    .item {
+        width: 90%;
+        padding: var(--space-md);
+    }
+    
+    .grid-2-complete {
+        gap: var(--space-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-2-complete {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .right-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .pokemon-img {
+        width: var(--width-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .back{
+        padding-top: 170px;
+    }
+    .item {
+        width: 95%;
+        padding: var(--space-sm);
+    }
+
+    .arrow-left {
+        top: 5px;
+        left: 5px;
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .pokemon-img {
+        width: var(--width-xs);
+    }
+
+    .pokemon-grid {
+        justify-content: center;
+    }
+
+    .pokemon-grid p {
+        font-size: var(--font-sm);
+        padding: 6px 10px;
+    }
+}

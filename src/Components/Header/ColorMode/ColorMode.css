@@ -1,0 +1,55 @@
+/* Estilos globales */
+:root {
+    /* Variables generales */
+    --bg: var(--bg-light);
+    --text: var(--text-light);
+    --primary: var(--primary-light);
+    --secondary: var(--secondary-light);
+    --detail: var(--detail-light);
+    --card: var(--card-light);
+    --shadow: var(--shadow-light);
+    --border: var(--border-light);
+
+}
+
+[data-theme="dark"] {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+  --primary: var(--primary-dark);
+  --secondary: var(--secondary-dark);
+  --detail: var(--detail-dark);
+  --card: var(--card-dark);
+  --shadow: var(--shadow-dark);
+  --border: var(--border-dark);
+
+}
+.color-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: rotate(360deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xs);
+  border-radius: 50%;
+}
+
+.color-mode-toggle:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.icon {
+  transition: transform 0.3s ease-in-out;
+  font-size: var(--font-xl);
+}
+
+.moon {
+  color: #4C4C4C;
+}
+
+.sun {
+  color: #FFD700;
+}
